@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper and Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f410a16b22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="fullWindow">
+        <div class="sideBar">
+            <div class="playerDetails">
+                <div class="profileImage centerItems">
+                    <div class="tempImage centerItems">
+                        <img src="./Materials/aliasProfile.png" title='Yep, that is you. xD' alt="" class='tempImage'>
+                        
+                    </div>
+                </div>
+                <div class="playerName centerItems">
+                    <input type="text" class='nameInput' placeholder="Enter your name here">
+                </div>
+            </div>
+            <div class="score">
+                <div class="Wins divide3 centerItems">
+                    <div class="name">Wins</div>
+                    <div class="colon">:</div>
+                    <div class="scoreNo" id='winsNo'>0</div>
+                </div>
+                <div class="Loses divide3 centerItems">
+                    <div class="name">Loses</div>
+                    <div class="colon">:</div>
+                    <div class="scoreNo" id='losesNo'>0</div>
+                </div>
+                <div class="Ties divide3 centerItems">
+                    <div class="name">Ties</div>
+                    <div class="colon">:</div>
+                    <div class="scoreNo" id='tiesNo'>0</div>
+                </div>
+            </div>
+            <div class="historyArea">
+                <div class="history-title">
+                    History
+                </div>
+                <div class="history">
+                    <div class="record-title">
+                        <div class="status-title centerItems">
+                            Status
+                        </div>
+                        <div class="you-title centerItems">
+                            You
+                        </div>
+                        <div class="comp-title centerItems">
+                            Comp
+                        </div>
+                    </div>
+                    <div class="record-content">
+                        <div class="record" id='record-1'>
+                            <div class="status centerItems">
+                                
+                            </div>
+                            <div class="you centerItems">
+                                <img class = 'history-img you-img' src="" alt="">
+                            </div>
+                            <div class="comp centerItems">
+                                <img class = 'history-img comp-img' src="" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="record-content" id='record-2'>
+                        <div class="record">
+                            <div class="status centerItems">
+                                
+                            </div>
+                            <div class="you centerItems">
+                                <img class = 'history-img you-img' src="" alt="">
+                            </div>
+                            <div class="comp centerItems">
+                                <img class = 'history-img comp-img' src="" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="record-content" id='record-3'>
+                        <div class="record">
+                            <div class="status centerItems">
+                                
+                            </div>
+                            <div class="you centerItems">
+                                <img class = 'history-img you-img' src="" alt="">
+                            </div>
+                            <div class="comp centerItems">
+                                <img class = 'history-img comp-img' src="" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="record-content" id='record-4'>
+                        <div class="record">
+                            <div class="status centerItems">
+                                
+                            </div>
+                            <div class="you centerItems">
+                                <img class = 'history-img you-img' src="" alt="">
+                            </div>
+                            <div class="comp centerItems">
+                                <img class = 'history-img comp-img' src="" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="record-content" id='record-5'>
+                        <div class="record">
+                            <div class="status centerItems">
+                                
+                            </div>
+                            <div class="you centerItems">
+                                <img class = 'history-img you-img' src="" alt="">
+                            </div>
+                            <div class="comp centerItems">
+                                <img class = 'history-img comp-img' src="" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        <div class="gameWindow">
+            <div class ='winOverlay centerItems' id='winOverlay'>
+                <div id='winOverlay-content'>
+                    <div class="winOverlay-content">
+                        <div class="closeResult"><a href="#"  onclick='closeResult()' class='close-button'><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></div>
+                        <div class="winGIF  centerItems">
+                            <img src="" alt="" id='resultGif' style='padding:30px 0;max-width:100%;max-height:100%;'>
+                        </div>
+                        <div class="playAgain centerItems"><a href="#"  onclick='playAgain()' class='playAgain-button' style='font-size:20px;'>Play Again</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="playArea" id = 'playArea'>
+                <div class="youArea centerItems">
+                    <h1 class='player' style='font-size:48px;'>You</h1>
+                    <div class="choiceArea centerItems"><img src='' alt='' class='choice' id='youChoice' height='400px' width='400px'></div>
+                    <div><h2 style='font-size:25px;'>These are your options, choose one.</h2></div>
+                    <div class="optionArea">
+                        <div class='option centerItems' id="rock" title='Rock' onclick ='setChoice("rock");'><img src='./Materials/rock.png' alt='Rock' class='single-option' height='100%' width='auto'></div>
+                        <div class='option centerItems' id="paper" title='Paper' onclick ='setChoice("paper");'><img src='./Materials/paper.png' alt='Paper' class='single-option' height='100%' width='auto'></div>
+                        <div class='option centerItems' id="scissors" title='Scissors' onclick ='setChoice("scissors");'><img src='./Materials/scissors.png' class='single-option' alt='Scissors'  height='100%' width='auto'></div>
+                    </div>
+                </div>
+                <div class="vsArea centerItems">
+                    <h1 style='font-size:48px;'>vs</h1>
+                </div>
+                <div class="computerArea centerItems">
+                    <h1 class='player' style='font-size:48px;'>Computer</h1>
+                    <div class="choiceArea"><img src='' alt='' class='choice' id='computerChoice' height='400px' width='400px'></div>
+                    <div class="optionArea">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='functions.js'></script>
+</body>
+</html>
