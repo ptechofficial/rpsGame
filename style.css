@@ -17,10 +17,6 @@ body {
     color:white;
 }
 
-
-.gameWindow {
-    background:rgb(32, 34, 37);
-}
 .playerDetails {
     grid-row:1/2;
     grid-column: 1/2;
@@ -243,7 +239,3 @@ a {
     
 }
 
-
-div {
-  border:1px solid;
-}
