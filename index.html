@@ -98,8 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="gameWindow">
-            <div class ='winOverlay centerItems' id='winOverlay'>
+        <div class ='winOverlay centerItems' id='winOverlay'>
                 <div id='winOverlay-content'>
                     <div class="winOverlay-content">
                         <div class="closeResult"><a href="#"  onclick='closeResult()' class='close-button'><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></div>
@@ -110,26 +109,27 @@
                     </div>
                 </div>
             </div>
+        <div class="gameWindow">
+            
             <div class="playArea" id = 'playArea'>
                 <div class="youArea centerItems">
-                    <h1 class='player' style='font-size:48px;'>You</h1>
-                    <div class="choiceArea centerItems"><img src='' alt='' class='choice' id='youChoice' height='400px' width='400px'></div>
-                    <div><h2 style='font-size:25px;'>These are your options, choose one.</h2></div>
-                    <div class="optionArea">
-                        <div class='option centerItems' id="rock" title='Rock' onclick ='setChoice("rock");'><img src='./Materials/rock.png' alt='Rock' class='single-option' height='100%' width='auto'></div>
-                        <div class='option centerItems' id="paper" title='Paper' onclick ='setChoice("paper");'><img src='./Materials/paper.png' alt='Paper' class='single-option' height='100%' width='auto'></div>
-                        <div class='option centerItems' id="scissors" title='Scissors' onclick ='setChoice("scissors");'><img src='./Materials/scissors.png' class='single-option' alt='Scissors'  height='100%' width='auto'></div>
-                    </div>
+                    <h1 class='player'>You</h1>
+                    <div class="choiceArea centerItems"><img src='' alt='' class='choice' id='youChoice' ></div>
+                   
                 </div>
+                <div class="optionArea">
+                    <div class='option-title centerItems'><h2 >These are your options, choose one.</h2></div>
+                    <div class='option centerItems' id="rock" title='Rock' onclick ='setChoice("rock");'><img src='./Materials/rock.png' alt='Rock' class='single-option' height='100%' width='auto'></div>
+                    <div class='option centerItems' id="paper" title='Paper' onclick ='setChoice("paper");'><img src='./Materials/paper.png' alt='Paper' class='single-option' height='100%' width='auto'></div>
+                    <div class='option centerItems' id="scissors" title='Scissors' onclick ='setChoice("scissors");'><img src='./Materials/scissors.png' class='single-option' alt='Scissors'  height='100%' width='auto'></div>
+                </div>
+                
                 <div class="vsArea centerItems">
-                    <h1 style='font-size:48px;'>vs</h1>
+                    <h3>vs</h3>
                 </div>
                 <div class="computerArea centerItems">
-                    <h1 class='player' style='font-size:48px;'>Computer</h1>
-                    <div class="choiceArea"><img src='' alt='' class='choice' id='computerChoice' height='400px' width='400px'></div>
-                    <div class="optionArea">
-                        
-                    </div>
+                    <h1 class='player'>Computer</h1>
+                    <div class="choiceArea"><img src='' alt='' class='choice' id='computerChoice' ></div>
                 </div>
             </div>
         </div>

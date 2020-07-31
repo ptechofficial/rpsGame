@@ -4,6 +4,7 @@ var textWin = '';
 var result='';
 var resultArray=[];
 var allChoices = ['rock','paper','scissors'];
+
 function setChoice(newChoice) {
     var record=[];
     currentChoice = newChoice;
@@ -84,7 +85,7 @@ function updateRecord() {
     }
 }
 function openResult() {          
-    document.getElementById('winOverlay').style.width='75%'; 
+    document.getElementById('winOverlay').style.width='100%'; 
     document.getElementById('playArea').setAttribute('style','filter:blur(8px);'); 
     setTimeout(function(){ document.getElementById('winOverlay-content').setAttribute('style','display:block;');  }, 1000);
     document.getElementById('resultGif').src='./Materials/'+result+'.gif';
