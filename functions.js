@@ -75,7 +75,7 @@ function updateRecord() {
     document.getElementById('winsNo').innerHTML=winsNo;
     document.getElementById('losesNo').innerHTML=losesNo;
     document.getElementById('tiesNo').innerHTML=tiesNo;
-    for (var i =1;i<6;i++) {
+    for (var i =1;i<4;i++) {
         if (resultArray.length-i >=0) {
             statusList[i-1].innerHTML = resultArray[resultArray.length-i][0];
             yourChoiceList[i-1].src='./Materials/'+ resultArray[resultArray.length-i][1]+'.png';
