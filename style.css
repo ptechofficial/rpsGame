@@ -226,6 +226,32 @@ a {
     font-size:48px;
     
 }
+/*LightMode*/
+.light_fullWindow {
+    background:rgb(211, 211, 211);
+    color:black;
+}
+.light_playerName {
+    color:black;
+    background:white;
+}
+.light_nameInput {
+    color:black;
+    background:white;
+}
+.light_score {
+    background:white;
+    color:black;
+}
+.light_history {
+    color:black;
+    background:white;
+}
+.light_gameWindow {
+    background:white;
+    color:black;
+}
+
 @media only screen and (max-width: 1200px) {
     .fullWindow {
         grid-template-columns: 1fr 1fr;

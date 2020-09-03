@@ -104,3 +104,17 @@ function playAgain() {
     cChoice=null;
     textWin = '';
 }
+
+//LightMode
+$(document).ready(function(){
+    $('.toggleLight').click(function() {
+        console.log('lightMode Activated');
+        console.log('1');
+        $('.fullWindow').toggleClass('light_fullWindow');
+        $('.playerName').toggleClass('light_playerName');
+        $('.nameInput').toggleClass('light_nameInput');
+        $('.score').toggleClass('light_score');
+        $('.history').toggleClass('light_history');
+        $('.gameWindow').toggleClass('light_gameWindow');
+    });
+});
