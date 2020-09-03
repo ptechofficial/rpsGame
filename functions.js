@@ -108,8 +108,7 @@ function playAgain() {
 //LightMode
 $(document).ready(function(){
     $('.toggleLight').click(function() {
-        console.log('lightMode Activated');
-        console.log('1');
+        
         $('.fullWindow').toggleClass('light_fullWindow');
         $('.playerName').toggleClass('light_playerName');
         $('.nameInput').toggleClass('light_nameInput');
