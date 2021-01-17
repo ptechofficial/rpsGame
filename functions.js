@@ -98,8 +98,8 @@ function closeResult() {
 function playAgain() {
     
     closeResult();
-    document.getElementById('youChoice').src ='';
-    document.getElementById('computerChoice').src ='';
+    document.getElementById('youChoice').src ='./Materials/empty.png';
+    document.getElementById('computerChoice').src ='./Materials/empty.png';
     currentChoice = null;
     cChoice=null;
     textWin = '';
@@ -108,7 +108,8 @@ function playAgain() {
 //LightMode
 $(document).ready(function(){
     $('.toggleLight').click(function() {
-        
+        console.log('lightMode Activated');
+        console.log('1');
         $('.fullWindow').toggleClass('light_fullWindow');
         $('.playerName').toggleClass('light_playerName');
         $('.nameInput').toggleClass('light_nameInput');

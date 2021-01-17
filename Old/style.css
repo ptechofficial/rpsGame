@@ -1,0 +1,245 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    overflow:hidden;
+}
+.fullWindow {
+    height:100vh;
+    width:100%;
+    display:grid;
+    display:grid;
+    grid-template-rows: 1.3fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: 'Staatliches', cursive;
+    background:rgb(47, 49, 54);
+    color:white;
+}
+
+.playerDetails {
+    grid-row:1/2;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 2fr 0.8fr;
+}
+
+.tempImage {
+    
+    height:90%;
+    
+    border-radius:50%;
+}
+.centerItems {
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
+.playerName {
+    background:rgb(32, 34, 37);
+    margin:12px 70px;
+    border-radius:5px;
+    color:white;
+    
+}
+.nameInput {
+    background:transparent;
+    border:none;
+    width:100%;
+    height:100%;
+    color:white;
+    font-size:20px;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+}
+.score {
+    grid-row:2/3;
+    grid-column: 1/2;
+    margin:30px 40px;
+    background:rgb(32, 34, 37);
+    border-radius:5px;
+    font-size:20px;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr;
+}
+.divide3 {
+    display:grid;
+    grid-template-columns:1fr 10px 1fr;
+}
+.historyArea {
+    grid-row:3/4;
+    grid-column: 1/2;
+    display:grid;
+    grid-template-rows: 0.8fr 4fr;
+    font-size:20px;
+}
+.history-title {
+    padding:10px 0 0 40px;
+    font-size:24px;
+}
+.history {
+    margin:10px 40px 30px 40px;
+    padding:0 0 8px 0;
+    background:rgb(32, 34, 37);
+    border-radius:5px;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+}
+.record-title {
+    display:grid;
+    font-size:20px;
+    color:goldenrod;
+    grid-template-columns: 1.5fr 1fr 1fr;
+}
+.record {
+    display:grid;
+    font-size:18px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    min-height:100%;
+}
+.history-img {
+    width:auto;
+    height:120%;
+}
+
+/*Game Window*/
+
+.gameWindow {
+    grid-row:1/4;
+    grid-column:2/5;
+    overflow:hidden;
+    background:rgb(32, 34, 37);
+    color:white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.playArea {
+    height:100%;
+    
+    display:grid;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    transition:0.5s;
+}
+.youArea, .computerArea {
+    display:grid;
+    grid-template-rows: 0.7fr 3.1fr 0.35fr  1.3fr;
+}
+.player {
+    position: relative;
+    top:50px;
+}
+.choiceArea {
+    width:100%;
+    height:100%;
+    background:transparent;
+    
+    align-items:center;
+}
+.choice {
+    animation-name: rotateChoice;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes rotateChoice {
+    0% {transform:rotate(-22deg);}
+    50% {transform:rotate(22deg);}
+    100% {transform:rotate(-22deg);}
+}
+.optionArea {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:100%;
+    width:100%;
+}
+.option {
+    
+    width:100%;
+    height:100%;
+}
+.single-option:hover {
+    transform:scale(1.3,1.3);
+    transition:0.3s;
+}
+.winOverlay {
+    width:0;
+    height:100%;
+    background:rgba(0, 0, 0, 0.700);
+    
+    z-index:1;
+    color:white;
+    transition:1s;
+    position:fixed;
+    
+}
+#winOverlay-content {
+    display:none;
+    
+}
+.winOverlay-content {
+    margin:auto auto;
+    width:400px;
+    height:400px;
+    
+    display:grid;
+    grid-template-rows: 0.7fr 4fr 1fr;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+.close-button {
+    padding:20px 0;
+}
+
+.playAgain-button {
+    background:green;
+    padding:15px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .fullWindow {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 2.2fr 0.8fr;
+    }
+    .playerDetails {
+        grid-column: 1/2;
+        grid-row:1/2;
+    }
+    .score {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .gameWindow {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        
+    }
+    .historyArea {
+        grid-row:3/4;
+        grid-column: 1/3;
+    }
+    .history {
+        margin:10px 25% 10px 25%;
+        
+    }
+    .history-title {
+        display:grid;
+        justify-items: center;
+        
+    }
+    .playerName {
+        margin:10px 10%;
+    }
+    .player {
+        position: relative;
+        top:0;
+    }
+    
+}
+
+
+div {
+  border:1px solid;
+}
